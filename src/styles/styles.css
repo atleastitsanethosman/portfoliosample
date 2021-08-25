@@ -1,0 +1,307 @@
+/* adding variables for consistent color scheme and sidebar width */
+:root {
+    --green: #18453b;
+    --whitetext: ghostwhite;
+    --whitebackground: ghostwhite;
+    --sidebar: 150px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--whitebackground);
+}
+/* consistent formatting for headers along side denoting sections */
+h3 {
+    width: var(--sidebar);
+    text-align: right;
+    margin: 25px;
+    color: var(--green);
+}
+
+/* formatting for header with my name and nav links*/
+.header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--green);
+    color: var(--whitetext);
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+/* formatting for navigation links in header */
+.header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.header nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+a {
+    color: var(--whitetext);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--whitetext);
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+.ianh h2 {
+    Position: absolute;
+    font-size: 40px;
+    background-color: var(--green);
+    color: var(--whitetext);
+    padding: 20px;
+    margin: 20px;
+
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+/* adding in a decorative top photo vanishes in mobile view*/
+.ianh {
+    height: 400px;
+    width: 100%;
+    background-image: url("../images/traversebay.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* formatting for subtitle portfolio on styled photo */
+.ianh h2 {
+    Position: absolute;
+    font-size: 40px;
+    background-color: var(--green);
+    color: var(--whitetext);
+    padding: 20px;
+    margin: 20px;
+    bottom: 10px;
+    right: 10px;
+
+}
+
+/* formatting for about me section to keep consistent style with other areas. */
+.aboutme {
+    display: flex;
+    flex-direction: row;
+    padding-top: 25px;
+    width: 100%;
+}
+
+.bio {
+    border-left: 3px var(--green) solid;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.aboutme img {
+    border-style: solid;
+    border-color: var(--green);
+    border-width: 10px;
+    padding: 10px;
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 25px;
+  }
+
+.aboutme p {
+    margin: 25px;
+}
+
+.aboutme a {
+    margin: 10px;
+    background-color: var(--green);
+    color: var(--whitetext);
+    width: 100px;
+    padding: 25px;
+    text-align: center;
+   
+}
+
+/* styling for projects list */
+.projects {
+    display: flex;
+    flex-direction: row;
+    padding-top: 25px;
+}
+
+.projects-list {
+    flex: 4;
+    background-color: (var(--whitebackground));
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-left: 3px var(--green) solid;
+    position: relative;
+  }
+
+  .projectcard {
+    border-style: solid;
+    border-color: var(--green);
+    border-width: 10px;
+    padding: 10px;
+    flex: 0 0 40%;
+    margin: 20px;
+    position: relative;
+  }
+
+  .projectcard a:hover {
+      opacity: 75%;
+  }
+
+/* ensuring images fill project card */
+  .projectcard img {
+    width: 100%;    
+  }
+
+  /* makes first project in list show larger than others */
+  .projectcard:nth-child(1) {
+      flex: 0 0 90%;
+  }
+
+  /* formatting the labels on the individual project cards */
+  .projectname {
+      background-color: var(--green);
+      width: 75%;
+      height: auto;
+      bottom: 0px;
+      left: 0px;
+      position: absolute;
+      padding: 20px;
+  }
+
+  .projectname h4 {
+    color: var(--whitetext);
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .projectname h5 {
+    color: var(--whitetext);
+    font-size: 10px;
+    padding: 5px;
+  }
+
+
+/* Syling for contact links section */
+  .contact {
+      display: flex;
+      flex-direction: row;
+      padding-top: 25px;
+      width: 100%;
+  }
+
+  .contact ul {
+      display: flex;
+      flex-direction: row;
+      border-left: 3px var(--green) solid;     
+  }
+
+  .contact a {
+        margin: 25px;
+        background-color: var(--green);
+        color: var(--whitetext);
+        width: 100px;
+        padding: 10px 25px;
+        text-align: center;
+       
+  }
+/* adding responsive elements to adjust content based on screen size */
+@media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header nav ul{
+        flex-direction: column;
+    }
+
+    .header nav ul li{
+        margin-top: 20px;
+    }
+
+    .ianh {
+        display: none;
+    }
+    
+    .aboutme {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 3px var(--green) solid;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .bio {
+        flex-direction: column;
+        border-left: 0px;
+        align-items: center;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 3px var(--green) solid;
+    }
+
+    .projects-list{
+        border-left: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projectcard {
+        flex: 0 0 81%;
+    }
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact ul {
+        flex-direction: column;
+        align-items: center;
+        border-left: 0px;
+    }
+    .contact a {
+        margin: 10px;
+    }
+}
