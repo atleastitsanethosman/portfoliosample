@@ -166,10 +166,6 @@ main {
     width: 100%;    
   }
 
-  /* makes first project in list show larger than others */
-  .projectcard:nth-child(1) {
-      flex: 0 0 90%;
-  }
 
   /* formatting the labels on the individual project cards */
   .projectname {
