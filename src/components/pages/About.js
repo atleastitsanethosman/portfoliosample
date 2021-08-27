@@ -4,11 +4,11 @@ import React from 'react';
 export default function About() {
   
   return (
-    <section class="aboutme" id="about">
+    <section className="aboutme" id="about">
       <div>  
       <h3>About Ian</h3>
       </div>
-      <div class = "bio">
+      <div className = "bio">
         <img src='/images/hennesseycrop.jpg' alt="Ian Hennessey" />
         <p>
           I am currently enrolled as a student in the Michigan State University Coding Bootcamp, learning the skills necessary to be a full stack web developer. 

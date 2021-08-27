@@ -10,8 +10,8 @@ export default function Nav({currentPage, pageChange}) {
   
   return (
     <nav className="main-header-menu">
-      <div class = "ianh" style={styles.heroStyle}></div>
-      <header class="header">
+      <div className="ianh" style={styles.heroStyle}></div>
+      <header className="header">
       <h1>Ian Hennessey</h1>
       <nav>
         <ul>
