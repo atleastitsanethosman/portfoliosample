@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const styles = {
   heroStyle: {
@@ -6,7 +7,7 @@ const styles = {
   }
 }
 
-export default function Nav({currentPage, pageChange}) {
+export default function Nav() {
   
   return (
     <nav className="main-header-menu">
@@ -16,32 +17,16 @@ export default function Nav({currentPage, pageChange}) {
       <nav>
         <ul>
           <li>
-            <a href="/About"
-            onClick={(event) => {
-              event.preventDefault();
-              pageChange('About')}}
-            >About</a>
+            <Link to="/">About</Link>
           </li>
           <li>
-            <a href="/Portfolio"
-            onClick={(event) => {
-              event.preventDefault();
-              pageChange('Portfolio')}}
-            >Portfolio</a>
+            <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
-            <a href="/Resume"
-            onClick={(event) => {
-              event.preventDefault();
-              pageChange('Resume')}}
-            >Resume</a>
+            <Link to="/resume">Resume</Link>
           </li>
           <li>
-            <a href="/Contact"
-            onClick={(event) => {
-              event.preventDefault();
-              pageChange('Contact')}}
-            >Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>

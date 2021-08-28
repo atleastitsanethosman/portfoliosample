@@ -132,7 +132,7 @@ main {
 .projects {
     display: flex;
     flex-direction: row;
-    padding-top: 25px;
+    padding: 25px 0px;
 }
 
 .projects-list {
