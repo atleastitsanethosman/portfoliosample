@@ -1,16 +1,23 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {useForm} from 'react-hook-form'
 
 export default function Contact() {
     return(
     <section className="contact">
+      <div>
       <h3>Contact</h3>
-      <section>
-          <ul>
-            <a target="_blank" href="https://www.linkedin.com/in/ian-hennessey-b4310a38"> <li><span><FontAwesomeIcon icon={['fab', 'linkedin']} /></span> Linkedin</li> </a>
-            <a target ="_blank" href="https://github.com/atleastitsanethosman"><li><span><FontAwesomeIcon icon={['fab', 'github']} /></span> GitHub</li></a>
-            <a href="mailto:ian.hennessey@gmail.com"> <li><span><FontAwesomeIcon icon={['fas', 'envelope-square']} /></span> Email</li></a>
-          </ul>
+      </div>
+      <section className="contact-form">
+        <form id='contact-form'>
+          <input type='text' name='user_name' placeholder='Name' />
+          <br/>
+          <input type='email' name='user_email' placeholder='Email' />
+          <br/>
+          <textarea name='message' placeholder='Message'/>
+          <br/>
+          <input type='submit' value='Send' />
+        </form>
       </section>
     </section>
     )

@@ -59,6 +59,38 @@ h3 {
     margin-left: 25px;
 }
 
+.footer {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--green);
+    color: var(--whitetext);
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+/* formatting for navigation links in footer */
+.footer nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    
+}
+
+.footer nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
 a {
     color: var(--whitetext);
     text-decoration: none;
@@ -196,10 +228,10 @@ main {
       display: flex;
       flex-direction: row;
       padding: 25px 0px;
-      width: 100%;
+      width: 100%;  
   }
 
-  .contact ul {
+  .contact-form {
       display: flex;
       flex-direction: row;
       border-left: 3px var(--green) solid;     
@@ -228,6 +260,19 @@ main {
     .header nav ul li{
         margin-top: 20px;
     }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        }
+
+    .footer nav ul{
+            flex-direction: column;
+        }
+
+    .footer nav ul li{
+            margin-top: 20px;
+        }
 
     .ianh {
         display: none;
@@ -269,7 +314,7 @@ main {
         align-items: center;
     }
 
-    .contact ul {
+    .contact-form {
         flex-direction: column;
         align-items: center;
         border-left: 0px;
