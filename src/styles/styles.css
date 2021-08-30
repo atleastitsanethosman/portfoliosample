@@ -234,8 +234,24 @@ main {
   .contact-form {
       display: flex;
       flex-direction: row;
-      border-left: 3px var(--green) solid;     
+      padding: 5px;
+      border-left: 3px var(--green) solid;  
+      width: 100%; 
   }
+
+  .warning {
+      color: red;
+      padding: 5px;
+  }
+
+  .contact-form input {
+      width: 100%;
+  }
+
+  .contact-form textarea {  
+        height: 10em;
+        width: 100%
+      }
 
   .contact a {
         margin: 25px;
