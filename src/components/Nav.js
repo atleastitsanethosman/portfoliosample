@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const styles = {
   heroStyle: {
-      backgroundImage: "url(/images/traversebay.png)"
+      backgroundImage: "url(./images/traversebay.png)"
   }
 }
 
