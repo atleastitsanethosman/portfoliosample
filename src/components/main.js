@@ -9,9 +9,10 @@ import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {faFile, faEnvelopeSquare} from '@fortawesome/free-solid-svg-icons';
 import { fab } from'@fortawesome/free-brands-svg-icons';
+import { fas } from "@fortawesome/free-solid-svg-icons"
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-library.add(fab, faFile, faEnvelopeSquare,)
+library.add(fab, fas, faFile, faEnvelopeSquare,)
 
 export default function Main() {
   
@@ -19,10 +20,11 @@ export default function Main() {
     <Router>
       <div>
         <Nav />
-        <Route exact path="/" component={About} />
+        <Route exact path="/about" component={About} />
         <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/resume" component={Resume} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path ="/" component ={About} />
         <Footer />
       </div>
     </Router>

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const headerImage = process.env.PUBLIC_URL + "/images/traversebay.png"
+
 const styles = {
   heroStyle: {
-      backgroundImage: "url(./images/traversebay.png)"
+      backgroundImage: `url(${headerImage})`
   }
 }
 
@@ -17,7 +19,7 @@ export default function Nav() {
         <nav>
           <ul>
             <li>
-              <Link to="/">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
               <Link to="/portfolio">Portfolio</Link>

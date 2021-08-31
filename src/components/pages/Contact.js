@@ -25,13 +25,13 @@ export default function Contact() {
       </div>
       <section className="contact-form" onSubmit={handleSubmit(onSubmit)}>
         <form id='contact-form'>
-          {errors.name && <div className="warning">Name Required!</div>}
+          {errors.name && <div className="warning"><span><FontAwesomeIcon icon={['fas', 'ban']} /></span> Name Required!</div>}
           <input type='text' {...register("name", {required: true, maxLength: 50})} name='name' placeholder='Name' />
           <br/>
-          {errors.email && <div className="warning">Valid Email Required!</div>}
+          {errors.email && <div className="warning"><span><FontAwesomeIcon icon={['fas', 'ban']} /></span> Valid Email Required!</div>}
           <input type='email' {...register("email", {required: true, pattern: /^\S+@\S+\.\S+$/})} name='email' placeholder='Email' />
           <br/>
-          {errors.message && <div className="warning">Message between 10 and 1500 Characters Required!</div>}
+          {errors.message && <div className="warning"><span><FontAwesomeIcon icon={['fas', 'ban']} /></span> Message between 10 and 1500 Characters Required!</div>}
           <textarea {...register("message", {required: true, min:10, max: 1500})} name='message' placeholder='Message'/>
           <br/>
           <input type='submit' value='Send' />
