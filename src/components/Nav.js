@@ -19,16 +19,16 @@ export default function Nav() {
         <nav>
           <ul>
             <li>
-              <Link to="/about">About</Link>
+              <Link to={process.env.PUBLIC_URL} >About</Link>
             </li>
             <li>
-              <Link to="/portfolio">Portfolio</Link>
+              <Link to={process.env.PUBLIC_URL + "/portfolio"}>Portfolio</Link>
             </li>
             <li>
-              <Link to="/resume">Resume</Link>
+              <Link to={process.env.PUBLIC_URL + "/resume"}>Resume</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to={process.env.PUBLIC_URL + "/contact"}>Contact</Link>
             </li>
           </ul>
         </nav>

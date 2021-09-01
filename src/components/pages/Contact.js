@@ -8,14 +8,14 @@ init("user_5o4fYZ0JYcNmlg4LMm17k");
 export default function Contact() {
     
   const { register, handleSubmit, formState: { errors } } = useForm({mode: "onBlur"});
-  const onSubmit = (data) => { 
+  const onSubmit = (data, event) => { 
     sendForm('portfoliocontact', 'portfolio_contact', '#contact-form')
     .then(function(response) {
       console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
       console.log('FAILED...', error);
-    });
-    
+    })
+    .then(event.target.reset());
   };
   
     return(

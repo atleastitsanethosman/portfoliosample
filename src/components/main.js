@@ -20,11 +20,11 @@ export default function Main() {
     <Router>
       <div>
         <Nav />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/portfolio" component={Portfolio} />
-        <Route exact path="/resume" component={Resume} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path ="/" component ={About} />
+        <Route exact path={process.env.PUBLIC_URL} component={About} />
+        <Route exact path={process.env.PUBLIC_URL + "/portfolio"} component={Portfolio} />
+        <Route exact path={process.env.PUBLIC_URL + "/resume"} component={Resume} />
+        <Route exact path={process.env.PUBLIC_URL + "/contact"} component={Contact} />
+        <Route exact path={process.env.PUBLIC_URL + "/about"} component={About} />
         <Footer />
       </div>
     </Router>
